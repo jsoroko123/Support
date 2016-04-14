@@ -1,0 +1,1 @@
+CHANGED,C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\support\fragments\StatsFragment.class

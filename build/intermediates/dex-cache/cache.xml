@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\libs\GraphView-4.0.1.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="8bd182a66f13dedad362bfbf992be96de2be5969">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\2\GraphView-4.0.1_e6cdd6651d3591127c1a97cd3974cc0d064914f5\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\libs\okio-1.6.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\2\okio-1.6.0_192d1acf9de744b57006ccf05b0dc6ddae98b7b1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_cd211a2f0bdafb83b2dc362ac46fd99972747418\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\6.5.87\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-6.5.87_67b920121455aa4fb702a55387dcbb1346f4d53e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\exploded-aar\com.microsoft.azure\azure-notifications-handler\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="c322af100020e6db539f2aa367698d4b88fc453f">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\10\com.microsoft.azure-azure-notifications-handler-1.0.1_4dba536c5100f88298570eac5bbd01b8adb07a68\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\libs\okhttp-3.2.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\2\okhttp-3.2.0_f13656dd811a43fb159db683ff91728999e6d709\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\libs\notification-hubs-0.4.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="341cf8ef72f7244597c95190386787eef19120a4">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\2\notification-hubs-0.4_3f9dbdbd71db120e6270900895630c96c3976d7f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\libs\ksoap2-android-assembly-3.4.0-jar-with-dependencies.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="45fbaab416fb5cff992e662d1f7a83786f084fc3">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\2\ksoap2-android-assembly-3.4.0-jar-with-dependencies_8c2ceffe71f94ffe495c5bda7232e5c080c62b4f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="a43cf9e271b5bc564e880a0a4be63ab9c69c97f8">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\2\nineoldandroids-2.4.0_f91f3616721975671cbec7a88c7eb94176188612\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\jars\libs\internal_impl-21.0.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-21.0.0_026e68c720d6ea63b675bd9386cdcf9119dd9e4c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="30b73a24a028d2fb9cc365ac8b9b87bd6cb5193a">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_52cd6c538bb4aa62b6b05b7ec0367aa12122ec92\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="10b6659c09a4556728faf4965a4f201a1e3fd62a">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_36bb4a38b955ca88d63f33454aad9f09c5551d1b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-21.0.0_d566aebc73f7ef9030f55d7aa91deb854d58791a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\libs\gson-2.2.2.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="53bfcd3c8e310d1493b2691484525ed90b04e236">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\2\gson-2.2.2_b55ff0e8ecc127b877fc5093224a43d1465d75c8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="C:\Users\Jeffery\AndroidStudioProjects\Support\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-21.0.0_75069de95d186ea5a01cce337edb320f9d276e8c\classes.dex" />
+    </item>
+
+</items>
