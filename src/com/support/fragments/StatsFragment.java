@@ -40,7 +40,7 @@ public class StatsFragment extends Fragment {
 				return Color.rgb((int) data.getX() * 255 / 4, (int) Math.abs(data.getY() * 255 / 6), 100);
 			}
 		});
-
+		//Test
 		series.setSpacing(50);
 		series.setDrawValuesOnTop(true);
 		series.setValuesOnTopColor(Color.RED);
