@@ -15,5 +15,11 @@
     <dimen name="create_new_message_item_padding">10dp</dimen>
     <dimen name="list_text_size">16sp</dimen>
     <dimen name="list_item_height">48dip</dimen>
+    <dimen name="title_font_size">16dp</dimen>
+    <dimen name="domain_label_font_size">12dp</dimen>
+    <dimen name="range_label_font_size">12dp</dimen>
+    <dimen name="range_tick_label_font_size">12dp</dimen>
+    <dimen name="domain_tick_label_font_size">12dp</dimen>
+    <dimen name="legend_text_font_size">12dp</dimen>
 
 </resources>

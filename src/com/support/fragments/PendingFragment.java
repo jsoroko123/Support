@@ -1,13 +1,17 @@
 package com.support.fragments;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,7 +34,7 @@ import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 
-public class PendingFragment extends Fragment {
+public class PendingFragment extends Fragment implements OnItemClickListener {
 
 	private ArrayList<PendingCases> listItemInfo = new ArrayList<>();
 	private ListView lvPendingCases;
@@ -48,6 +52,7 @@ public class PendingFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_pending, container,
 				false);
 		lvPendingCases = (ListView) rootView.findViewById(R.id.list_pending_cases);
+		lvPendingCases.setOnItemClickListener(this);
 		tvNoCases = (TextView) rootView.findViewById(R.id.tvNoPendingCases);
 		spm = new SharedPreferenceManager(getActivity());
 		getActivity().getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
@@ -56,6 +61,11 @@ public class PendingFragment extends Fragment {
 		ListCasesAsyncCallWS as = new ListCasesAsyncCallWS(getActivity(), spm.getInt("ClientID",0));
 		as.execute();
 		return rootView;
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		showPopUpForCaseApproval(getActivity());
 	}
 
 	private class ListCasesAsyncCallWS extends AsyncTask<String, Void, Integer> {
@@ -122,5 +132,38 @@ public class PendingFragment extends Fragment {
 			}
 		}
 	}
-	
+
+	public void showPopUpForCaseApproval(final Context mContext) {
+		LayoutInflater li = LayoutInflater.from(mContext);
+		View promptsView = li.inflate(R.layout.dialogscanner10, null);
+
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+				mContext);
+
+		alertDialogBuilder.setTitle("Case Approval");
+		//final ListView lv=(ListView)promptsView.findViewById(R.id.list_update);
+
+
+		// set prompts.xml to alertdialog builder
+		alertDialogBuilder.setView(promptsView)
+				.setPositiveButton("OK",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+
+							}
+						})
+
+				.setNegativeButton("Cancel",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+
+							}
+						});
+
+		AlertDialog alertDialog = alertDialogBuilder.create();
+		alertDialog.show();
+	}
+
+
 }

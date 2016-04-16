@@ -32,11 +32,9 @@ import com.support.custom.CustomProgressBar;
 import com.support.http.HttpClient;
 import com.support.main.MainActivity;
 import com.example.appolissupport.R;
-import com.support.objects.CaseType;
 import com.support.objects.Client;
 
 import com.support.objects.ClientDrop;
-import com.support.objects.User;
 import com.support.objects.UserDepartment;
 import com.support.objects.UserInfo;
 import com.support.utilities.Constants;
@@ -804,9 +802,6 @@ public class ClientsFragment extends Fragment implements OnItemClickListener, On
 					response = Constants.DEFAULT_ERROR_MSG;
 				}
 			}
-
-				spm.saveBoolean("CaseApproval", CaseApproval);
-				spm.saveBoolean("IsAdministrator", isAdmin);
 				return response;
 		}
 

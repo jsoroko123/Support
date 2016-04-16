@@ -9,6 +9,7 @@ import com.support.objects.CaseArea;
 import com.support.objects.CaseSeverity;
 import com.support.objects.CaseStatus;
 import com.support.objects.CaseType;
+import com.support.objects.CasesByMonth;
 import com.support.objects.Client;
 import com.support.objects.ClientDrop;
 import com.support.objects.Details;
@@ -129,6 +130,16 @@ public final class DataParser {
         Gson gson = new Gson();
         Type collectionType = new TypeToken<ArrayList<SupportUser>>() {}.getType();
         ArrayList<SupportUser> details = gson.fromJson(jsonData, collectionType);
+        return details;
+    }
+
+    public static ArrayList<CasesByMonth> getCasesByMonth(String jsonData) throws JsonSyntaxException {
+        if (StringUtils.isBlank(jsonData)) {
+            return null;
+        }
+        Gson gson = new Gson();
+        Type collectionType = new TypeToken<ArrayList<CasesByMonth>>() {}.getType();
+        ArrayList<CasesByMonth> details = gson.fromJson(jsonData, collectionType);
         return details;
     }
 
