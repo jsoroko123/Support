@@ -16,6 +16,7 @@ public class SupportCases implements Serializable {
 	private String Email;
 	private String PHONE;
 	private String CaseStatusDesc;
+	private int CaseStatusID;
 	private String dt_created;
 	private String CaseSeverityDesc;
 	private String Issue;
@@ -104,6 +105,14 @@ public class SupportCases implements Serializable {
 
 	public void setCaseStatusDesc(String caseStatusDesc) {
 		CaseStatusDesc = caseStatusDesc;
+	}
+
+	public int getCaseStatusID() {
+		return CaseStatusID;
+	}
+
+	public void setCaseStatusID(int caseStatusID) {
+		CaseStatusID = caseStatusID;
 	}
 
 	public String getDt_created() {

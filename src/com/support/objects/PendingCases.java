@@ -4,9 +4,7 @@ package com.support.objects;
 import java.io.Serializable;
 
 public class PendingCases implements Serializable {
-	/**
-	 *
-	 */
+
 	private int PendingCommentID;
 	private String Username;
 	private String CommentTitle;
@@ -17,8 +15,9 @@ public class PendingCases implements Serializable {
 	private String ReasonDesc;
 	private String DateCreated;
 	private boolean HasAttachment;
+	private String Color;
 
-	public PendingCases(int pendingCommentID, String username, String commentTitle, String comments, String severity, String caseSeverityDesc, int caseReasonID, String reasonDesc, String dateCreated, boolean hasAttachment) {
+	public PendingCases(int pendingCommentID, String username, String commentTitle, String comments, String severity, String caseSeverityDesc, int caseReasonID, String reasonDesc, String dateCreated, boolean hasAttachment, String color) {
 		PendingCommentID = pendingCommentID;
 		Username = username;
 		CommentTitle = commentTitle;
@@ -29,6 +28,7 @@ public class PendingCases implements Serializable {
 		ReasonDesc = reasonDesc;
 		DateCreated = dateCreated;
 		HasAttachment = hasAttachment;
+		Color = color;
 	}
 
 	public int getPendingCommentID() {
@@ -109,6 +109,14 @@ public class PendingCases implements Serializable {
 
 	public void setHasAttachment(boolean hasAttachment) {
 		HasAttachment = hasAttachment;
+	}
+
+	public String getColor() {
+		return Color;
+	}
+
+	public void setColor(String color) {
+		Color = color;
 	}
 }
 

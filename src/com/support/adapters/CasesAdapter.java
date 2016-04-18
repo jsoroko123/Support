@@ -33,7 +33,6 @@ public class CasesAdapter extends ArrayAdapter<SupportCases> {
 	private ArrayList<SupportCases> listItemInfos;
 	public static int highCase;
 	public static int caseID;
-	SharedPreferenceManager spm;
 	private RotateAnimation ra;
 
 
@@ -88,20 +87,20 @@ public class CasesAdapter extends ArrayAdapter<SupportCases> {
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		ItemDetailHolder itemDetailHolder;
 		final SupportCases item = getItem(position);
+		caseID = Integer.valueOf(item.getCommentID());
+
 		if(null == convertView){
 			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.case_item, null);
 			itemDetailHolder = new ItemDetailHolder();
 			itemDetailHolder.tvCaseNumber = (TextView) convertView.findViewById(R.id.tv_case_number);
 			itemDetailHolder.tvStatus = (TextView) convertView.findViewById(R.id.tv_status);
-			//itemDetailHolder.tvAssigned = (TextView) convertView.findViewById(R.id.tv_assignment);
 			itemDetailHolder.tvClient = (TextView) convertView.findViewById(R.id.tv_client);
 			itemDetailHolder.tvIssue = (TextView) convertView.findViewById(R.id.tv_issue);
 			itemDetailHolder.tvAssigned = (TextView) convertView.findViewById(R.id.tv_assignment);
 			itemDetailHolder.tvassignmentTitle = (TextView) convertView.findViewById(R.id.tv_assignment_title);
 			itemDetailHolder.tvSubmitted = (TextView) convertView.findViewById(R.id.tv_submittedby);
 			itemDetailHolder.tvSubmittedTitle = (TextView) convertView.findViewById(R.id.tv_submittedby_title);
-
 			itemDetailHolder.date = (TextView) convertView.findViewById(R.id.tv_date);
 			itemDetailHolder.swipeBtStartTimer = (Button) convertView.findViewById(R.id.swipeBtStart);
 			itemDetailHolder.swipeBtStopTimer = (Button) convertView.findViewById(R.id.swipeBtStop);
@@ -118,15 +117,12 @@ public class CasesAdapter extends ArrayAdapter<SupportCases> {
 			itemDetailHolder = (ItemDetailHolder) convertView.getTag();
 		}
 		
-
-
 		itemDetailHolder.swipeBtStartTimer.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
-
-					Utilities.ShowDialog("Feature Not Available","Feature Not Available", getContext());
-				
+					CasesFragment cf = new CasesFragment();
+					cf.InsertTime(context, caseID, MainActivity.spm2.getInt("UserID", 0), item.getCaseStatusID());
 				}
 			});
 		
@@ -154,7 +150,6 @@ public class CasesAdapter extends ArrayAdapter<SupportCases> {
 
 			@Override
 			public void onClick(View v) {
-				caseID = Integer.valueOf(item.getCommentID());
 				CasesFragment cf = new CasesFragment();
 				cf.showPopUpForNotes(getContext(),caseID);
 
@@ -254,17 +249,8 @@ public class CasesAdapter extends ArrayAdapter<SupportCases> {
 					itemDetailHolder.ivSticky.setVisibility(View.GONE);
 				}
 
-
-			itemDetailHolder.ivCircle.setImageDrawable(ShapeBuilder.buildSelectorShapeFromColors(item.getColor(), item.getColor(), item.getColor(),
+				itemDetailHolder.ivCircle.setImageDrawable(ShapeBuilder.buildSelectorShapeFromColors(item.getColor(), item.getColor(), item.getColor(),
 					item.getColor(), item.getColor(), item.getColor(), 1, 90));
-
-
-
-//
-//					Animation rotation = AnimationUtils.loadAnimation(context, R.anim.rotate);
-//					rotation.setRepeatCount(Animation.INFINITE);
-//			itemDetailHolder.ivCircle.startAnimation(rotation);
-
 
 				if(Integer.valueOf(item.getCommentID()) > highCase ) {
 					MainActivity.spm2.saveInt("HighCase",Integer.valueOf(item.getCommentID()));

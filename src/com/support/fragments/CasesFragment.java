@@ -920,6 +920,83 @@ public class CasesFragment extends Fragment implements OnClickListener, OnItemCl
 		}
 	}
 
+	public void InsertTime(Context ctx, int CaseID, int UserID, int StatusID){
+		InsertSupportTime ist = new InsertSupportTime(ctx, CaseID, UserID, StatusID);
+		ist.execute();
+	}
+
+
+
+	private class InsertSupportTime extends AsyncTask<String, Void, Integer> {
+		Context context;
+		int caseID;
+		int userID;
+		int caseStatusID;
+		String response;
+
+
+		public InsertSupportTime(Context mContext, int mCaseID, int mUserID, int mCaseStatusID){
+			this.context = mContext;
+			this.caseID = mCaseID;
+			this.userID = mUserID;
+			this.caseStatusID = mCaseStatusID;
+		}
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			if(!isCancelled()){
+				CustomProgressBar.showProgressBar(context, false);
+			}
+		}
+
+		@Override
+		protected Integer doInBackground(String... params) {
+			JSONObject json = new JSONObject();
+			try {
+				json.put("CommentID", String.valueOf(caseID));
+				json.put("UserID", String.valueOf(userID));
+				json.put("CaseStatusID", String.valueOf(caseStatusID));
+			} catch (JSONException e) {
+				return 2;
+			}
+
+			HttpClient client = new HttpClient();
+			try {
+				response = client.post(Constants.URL + "/api/Time/Post", json.toString());
+			} catch (Exception e) {
+				e.printStackTrace();
+				if (e instanceof SocketException
+						|| e instanceof UnknownHostException
+						|| e instanceof SocketTimeoutException
+						|| e instanceof ConnectTimeoutException
+						|| e instanceof ClientProtocolException) {
+					return 1;
+
+				} else {
+					return 2;
+				}
+			}
+			return 0;
+		}
+
+
+		@Override
+		protected void onPostExecute(Integer result) {
+			CustomProgressBar.hideProgressBar();
+			if (result == 1) {
+				Utilities.ShowDialog("Network Error", Constants.ERROR_CONNECTION, context);
+			} else if (result == 2) {
+				Utilities.ShowDialog("Error", Constants.DEFAULT_ERROR_MSG, context);
+			} else {
+				refreshData(context, statusID, clientID, caseTypeID, spm.getInt("CompanyID", 0), search, fDate, tDate, UserID, true, spm.getBoolean("IsSupport", false));
+			}
+		}
+	}
+
+
+
+
 	public void CheckSharedPrefs(){
 		if(!spm.getString("Search", "").isEmpty()){
 			search = spm.getString("Search", "");
@@ -964,4 +1041,7 @@ public class CasesFragment extends Fragment implements OnClickListener, OnItemCl
 			tDate = "3001/03/01T10:00:00-5:00";
 		}
 	}
+
+
+
 }
